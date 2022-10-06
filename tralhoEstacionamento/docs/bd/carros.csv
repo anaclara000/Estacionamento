@@ -1,0 +1,15 @@
+id_Cliente;id_Carro;Placa_Veiculo;Tipo;Marca;Modelo;Cor;Descrição
+1;1;EZY-3531;Carro;GM - Chevrolet;Opala Comodoro;Dourado;
+2;2;CMX-4278;Carro;Fiat;LINEA T-JET;Laranja;
+2;3;EMK-3987;Carro;VW - VolksWagen;Golf ;Amarelo;
+4;4;FGV-2578;Carro;Chrysler;Caravan;CINZA;
+5;5;DLP-0495;Carro;VW - VolksWagen;Grand Saveiro;MARROM;
+5;6;PDK-8038;Moto;GM - Chevrolet;Zafira 2.0;ROSA;
+6;7;OVR-6500;Moto;Suzuki;GSX-R1000R;BEGE;
+7;8;ILX-2749;Moto;Kawasaki;Civic Sed ;CINZA;
+8;9;CPP-9499;Moto;Honda;1160 Titan;Branca;
+9;10;CZU-0548;Moto;Yamaha;Neo 125 UBS;Preta;
+10;11;IJT-6692;Carro;Fiat;Palio;BEGE;
+10;12;FFZ-3959;Moto;BMW Motorrad;R 1250 RT;MARROM;
+11;13;QGG-7657;Caminhao;VW - VolksWagen;Pointer 1.8;ROSA;
+12;14;EAF-9603;Caminhao;Land Rover;Defender 90 TDI;PRATA;

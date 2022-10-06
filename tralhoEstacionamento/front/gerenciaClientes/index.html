@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Gerenciamento de Clientes</title>
+</head>
+<body>
+    <div class="cabecalho">FBC Cars</div>
+    <div class="container">
+        <header>
+            <aside>
+                <nav>
+                    <ul>
+                        <p class="itens-span">Menu</p>
+                        <li><a href="../"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <li><a href="../"><i class="fa-solid fa-users"></i>Clientes</a></li>
+                        <li><a href="../"><i class="fa-solid fa-tags"></i></i></i></i>Tickets</a></li>
+                        <li><a href="../"><i class="fa-solid fa-money-bill-1-wave"></i>Mensalidade</a></li>
+                        <p class="itens-span">Configurações</p>
+                        <li><a href="../"><i class="fa-solid fa-hand-holding-dollar"></i>Precificações</a></li>
+                        <li><a href="../"><i class="fa-solid fa-user-gear"></i>Usuarios</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </header>
+
+        <main>
+            <div class="cont-clientes">
+                <h1>Clientes</h1>
+                <div class="itens-cont-clientes">
+                    <button class="btnCli">Novo Cliente<i class="fa-solid fa-user-plus"></i></button>
+                    <div class="filtro-cont-clientes">
+                        <input type="text" placeholder="Pesquise pelo nome">
+                        <button class="btnPesquisar">Pesquisar</button>
+                    </div>
+                    <span>Total de clientes</span>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id Cliente</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Rua</th>
+                        <th>Bairro</th>
+                    </tr>
+                </thead>
+                <tbody class="lista-clientes">
+                    <tr class="linhamodelo model">
+                        <td id="idCli"></td>
+                        <td id="nomeCli"></td>
+                        <td id="CPFCli"></td>
+                        <td id="ruaCli"></td>
+                        <td id="bairroCli"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/4c95932411.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="script.js"></script>
+</html>
