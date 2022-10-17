@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <header>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="../gerenciaDepartamentos/index.html">Departamentos</a></li>
+                    <li><a href="../gerenciaSolicitacoes/index.html">Solicitacoes</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </header>
+    <div class="tabela">
+        <table>
+            <thead>
+                <th>Codigo</th>
+                <th>Produto</th>
+            </thead>
+            <tbody class="listas">
+                <tr class="lista model">
+                    <td id="cod"></td>
+                    <td id="nomeProduto"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button onClick="showModal()">Novo Produto</button>
+    <div class="modal model">
+        <div class="form-modal">
+            <input class="codProd" type="text" placeholder="Cod do produto">
+            <input class="nomeProd" type="text" placeholder="Nome do produto">
+            <button onClick="cadastrar()">Cadastrar</button>
+            <button id="cancel" onClick="showModal()">Cancelar</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

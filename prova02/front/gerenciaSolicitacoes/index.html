@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Solicitações</h1>
+    <header>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="../gerenciaDepartamentos/index.html">Departamentos</a></li>
+                    <li><a href="../gerenciaProdutos/index.html">Produtos</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </header>
+    <main>
+        <div class="tabela">
+            <table>
+                <thead>
+                    <th>Id Sol</th>
+                    <th>Data</th>
+                    <th>Cod Depto</th>
+                    <th>Depto</th>
+                    <th>Cod Func</th>
+                    <th>Func</th>
+                    <th>Cod Prod</th>
+                    <th>Prod</th>
+                    <th>Qtd</th>
+                    <th>Valor</th>
+                </thead>
+                <tbody class="listas">
+                    <tr class="lista model">
+                        <td id="id"></td>
+                        <td id="data"></td>
+                        <td id="codDepto"></td>
+                        <td id="nomeDepto"></td>
+                        <td id="codFunc"></td>
+                        <td id="nomeFunc"></td>
+                        <td id="codProd"></td>
+                        <td id="nomeProd"></td>
+                        <td id="qtd"></td>
+                        <td id="valor"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <button onClick="showModal()">Novo Lançamento</button>
+        <div class="modal model">
+            <div class="form-modal">
+                <input class="id" type="text" placeholder="Numero da Solicitação">
+                <input class="depto" type="number" placeholder="Cod do departamento">
+                <input class="func" type="text" placeholder="Cod do funcionario">
+                <input class="prod" type="text" placeholder="Cod do produto">
+                <input class="qtd" type="text" placeholder="Quantidade do produto">
+                <input class="total" type="text" placeholder="Valor total">
+                <button onClick="cadastrar()">Cadastrar</button>
+                <button id="cancel" onClick="showModal()">Cancelar</button>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="script.js"></script>
+</html>
