@@ -7,7 +7,7 @@ const conDB = mysql.createConnection({
 });
 
 function listarClientes(req, res) {
-    let query = "SELECT * FROM clientes";
+    let query = "SELECT * FROM clientes ORDER BY id_cliente asc";
 
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -19,7 +19,7 @@ function listarClientes(req, res) {
 };
 
 function cadastrarCliente(req, res) {
-    let query = `INSERT INTO clientes VALUES (DEFAULT, '${req.body.nome_cli}','${req.body.cpf}','${req.body.rua}','${req.body.bairro}')`;
+    let query = `INSERT INTO clientes VALUES (DEFAULT, '${req.body.nome_cli}','${req.body.email}','${req.body.data_nasc}','${req.body.cpf}','${req.body.bairro}','${req.body.rua}','${req.body.cep}','${req.body.complemento}','${req.body.municipio}')`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -29,7 +29,6 @@ function cadastrarCliente(req, res) {
         }
     });
 };
-
 
 function excluirCliente(req, res) {
     let query = `DELETE FROM clientes WHERE id_cliente = ${req.body.id_cliente}`;
@@ -43,9 +42,8 @@ function excluirCliente(req, res) {
     });
 };
 
-//não funcional
 function editarCliente(req, res){
-    let query = `UPDATE clientes SET id_cliente = ${req.body}`;
+    let query = `UPDATE clientes SET id_cliente = ${req.body.id_cliente}, id_cliente = ${req.body.id_cliente}, nome_cli = '${req.body.nome_cli}', email = '${req.body.email}', data_nasc ='${req.body.data_nasc}', cpf = '${req.body.cpf}',  bairro = '${req.body.bairro}', rua = '${req.body.rua}', cep = '${req.body.cep}', complemento = '${req.body.complemento}', municipio = '${req.body.municipio}' where id_cliente = '${req.body.id_cliente}'`;
 
     conDB.query(query, (err, result) => {
         if(err == null) {
@@ -55,7 +53,6 @@ function editarCliente(req, res){
         }
     });
 };
-
 
 module.exports = {
     listarClientes,
