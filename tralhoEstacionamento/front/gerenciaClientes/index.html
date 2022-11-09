@@ -20,8 +20,8 @@
                         <li><a href="../"><i class="fa-solid fa-users"></i>Clientes</a></li>
                         <!-- <li><a href="../"><i class="fa-solid fa-tags"></i>Tickets</a></li>
                         <li><a href="../"><i class="fa-solid fa-money-bill-1-wave"></i>Mensalidade</a></li>
-                        <li><a href="../"><i class="fa-solid fa-hand-holding-dollar"></i>Precificações</a></li>
-                        <li><a href="../"><i class="fa-solid fa-user-gear"></i>Usuarios</a></li> -->
+                        <li><a href="../"><i class="fa-solid fa-hand-holding-dollar"></i>Precificações</a></li> -->
+                        <li><a href="../gerenciaFuncionarios/index.html"><i class="fa-solid fa-user-gear"></i>Funcionários</a></li>
                         <li><a href="../"><i class='bx bx-cog'></i>Configurações</a></li>
                     </ul>
                 </nav>
@@ -29,24 +29,22 @@
         </header>
 
         <main>
+            <h1 class="titulo">Lista de clientes cadastrados no sistema</h1>
             <div class="cont-clientes">
-                <h1>Clientes</h1>
                 <div class="itens-cont-clientes">
-                    <button class="btnCli">Novo Cliente<i class="fa-solid fa-user-plus"></i></button>
+                    <button onclick="abrirModal()" class="btnCli">Novo Cliente<i class="fa-solid fa-user-plus"></i></button>
                     <div class="filtro-cont-clientes">
                         <input type="text" placeholder="Pesquise pelo nome">
                         <button class="btnPesquisar"><i class='bx bx-search-alt-2' ></i></button>
                     </div>
                     <div class="total">
-                        <p>Total de clientes</p>
-                        <label for="">16</label>
+                        <p>Total de clientes:<b> 16</b> </p>
                     </div>     
                 </div>
             </div>
-
             <table>
                 <thead>
-                    <tr>
+                    <tr class="cont-title-table">
                         <th>Id Cliente</th>
                         <th>Nome</th>
                         <th>Email</th>
@@ -75,7 +73,57 @@
                 </tbody>
             </table>
         </main>
-        
+        <div class="modal model">
+            <div class="cadastro">
+                <h1 class="tituloCad">Dados Pessoais</h1>
+                <div class="dados-pessoais">
+                    <div class="itens">
+                        <p>Nome</p>
+                        <input type="text" placeholder="Joaquim Pereira">
+                    </div>
+                    <div class="itens">
+                        <p>Email</p>
+                        <input type="text" placeholder="exemplo@exemplo.com">
+                    </div>
+                    <div class="itens">
+                        <p>Data de Nascimento</p>
+                        <input type="text" placeholder="XX/XX/XXXX">
+                    </div>
+                    <div class="itens">
+                        <p>CPF</p>
+                        <input type="text" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+                </div>
+                <h1 class="tituloCad">Dados Residenciais</h1>
+                <div class="dados-residenciais">
+                    <div class="itens">
+                        <p>Bairro</p>
+                        <input type="text" placeholder="bairro">
+                    </div>
+                    <div class="itens">
+                        <p>Rua</p>
+                        <input type="text" placeholder="rua">
+                    </div>
+                    <div class="itens">
+                        <p>CEP</p>
+                        <input type="text" placeholder="XXXXX-XX">
+                    </div>
+                   <div class="itens">
+                    <p>Complemento</p>
+                    <input type="text" placeholder="complemento">
+                   </div>
+                    <div class="itens">
+                        <p>Municipio</p>
+                        <input type="text" placeholder="municipio">
+                    </div>
+                </div>
+               
+                <div class="botoes">
+                    <button onclick="abrirModal()">Cadastrar</button>
+                    <button onclick="abrirModal()">Voltar</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://kit.fontawesome.com/4c95932411.js" crossorigin="anonymous"></script>

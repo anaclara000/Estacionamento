@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Gerenciamento de funcentes</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <aside>
+                <nav>
+                    <h1 class="logo">Penguion</h1>
+                    <ul>
+                        <!-- <li><a href="../"><i class="fa-solid fa-house"></i>Home</a></li> -->
+                        <li><a href="../"><i class="fa-solid fa-users"></i>Clientes</a></li>
+                        <!-- <li><a href="../"><i class="fa-solid fa-tags"></i>Tickets</a></li>
+                        <li><a href="../"><i class="fa-solid fa-money-bill-1-wave"></i>Mensalidade</a></li>
+                        <li><a href="../"><i class="fa-solid fa-hand-holding-dollar"></i>Precificações</a></li> -->
+                        <li><a href="../gerenciaFuncionarios/index.html"><i class="fa-solid fa-user-gear"></i>Funcionários</a></li>
+                        <li><a href="../"><i class='bx bx-cog'></i>Configurações</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </header>
+
+        <main>
+            <h1>Lista de funcionários cadastrados no sistema</h1>
+            <div class="cont-func">
+                <div class="itens-cont-func">
+                    <button onclick= "abrirModal()" class="btnfunc">Novo funcionário<i class="fa-solid fa-user-plus"></i></button>
+                    <div class="filtro-cont-func">
+                        <input type="text" placeholder="Pesquise pelo nome">
+                        <button class="btnPesquisar"><i class='bx bx-search-alt-2' ></i></button>
+                    </div>
+                    <div class="total">
+                        <p>Total de funcionários:<b> 16</b> </p>
+                        <label for=""></label>
+                    </div>     
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr class="cont-title-table">
+                        <th>Id funcionario</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Data Nasci</th>
+                        <th>CPF</th>
+                        <th>Bairro</th>
+                        <th>Rua</th>
+                        <th>CEP</th>
+                        <th>Complemento</th>
+                        <th>Municipio</th>
+                    </tr>
+                </thead>
+                <tbody class="lista-func">
+                    <tr class="linhamodelo model">
+                        <td id="idfunc"></td>
+                        <td id="nomefunc"></td>
+                        <td id="emailfunc"></td>
+                        <td id="datafunc"></td>
+                        <td id="CPFfunc"></td>
+                        <td id="bairrofunc"></td>
+                        <td id="ruafunc"></td>
+                        <td id="cepfunc"></td>
+                        <td id="complefunc"></td>
+                        <td id="munifunc"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/4c95932411.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="script.js"></script>
+</html>
