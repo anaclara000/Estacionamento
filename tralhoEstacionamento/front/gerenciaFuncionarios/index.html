@@ -17,10 +17,10 @@
                     <h1 class="logo">Penguion</h1>
                     <ul>
                         <!-- <li><a href="../"><i class="fa-solid fa-house"></i>Home</a></li> -->
-                        <li><a href="../"><i class="fa-solid fa-users"></i>Clientes</a></li>
+                        <li><a href="../gerenciaClientes/index.html"><i class="fa-solid fa-users"></i>Clientes</a></li>
                         <!-- <li><a href="../"><i class="fa-solid fa-tags"></i>Tickets</a></li>
-                        <li><a href="../"><i class="fa-solid fa-money-bill-1-wave"></i>Mensalidade</a></li>
-                        <li><a href="../"><i class="fa-solid fa-hand-holding-dollar"></i>Precificações</a></li> -->
+                        <li><a href="../"><i class="fa-solid fa-money-bill-1-wave"></i>Mensalidade</a></li> -->
+                        <li><a href="../gerenciaPrecos/preco.html"><i class="fa-solid fa-hand-holding-dollar"></i>Precificações</a></li>
                         <li><a href="../gerenciaFuncionarios/index.html"><i class="fa-solid fa-user-gear"></i>Funcionários</a></li>
                         <li><a href="../"><i class='bx bx-cog'></i>Configurações</a></li>
                     </ul>
@@ -56,6 +56,7 @@
                         <th>CEP</th>
                         <th>Complemento</th>
                         <th>Municipio</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody class="lista-func">
@@ -70,11 +71,68 @@
                         <td id="cepfunc"></td>
                         <td id="complefunc"></td>
                         <td id="munifunc"></td>
+                        <td id="acoes"><i onclick="deletar()"class='bx bx-trash'></i><i onclick="aualizar()" class='bx bxs-edit'></i></td>
+
                     </tr>
                 </tbody>
             </table>
         </main>
-        
+        <div class="modal model">
+            <div class="cadastro">
+                Preencher campos abaixo para efetuar o cadastro do funcionario:
+                <h1 class="tituloCad">Dados Pessoais</h1>
+                <div class="dados-pessoais">
+                    <div class="itens">
+                        <p>Nome*</p>
+                        <input class="nome" type="text" placeholder="Joaquim Pereira">
+                    </div>
+                    <div class="itens">
+                        <p>Email*</p>
+                        <input class="email" type="text" placeholder="exemplo@exemplo.com">
+                    </div>
+                    <div class="itens">
+                        <p>Data de Nascimento*</p>
+                        <input class="data" type="text" placeholder="XX/XX/XXXX">
+                    </div>
+                    <div class="itens">
+                        <p>CPF*</p>
+                        <input class="CPF" type="text" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+                    <div class="itens">
+                        <p>Cargo*</p>
+                        <input class="cargo" type="text" placeholder="Segurança">
+                    </div>
+                </div>
+                <h1 class="tituloCad">Dados Residenciais</h1>
+                <div class="dados-residenciais">
+                    <div class="itens">
+                        <p>Bairro</p>
+                        <input class="bairro" type="text" placeholder="bairro">
+                    </div>
+                    <div class="itens">
+                        <p>Rua</p>
+                        <input class="rua" type="text" placeholder="rua">
+                    </div>
+                    <div class="itens">
+                        <p>CEP*</p>
+                        <input class="CEP" type="text" placeholder="XXXXX-XX">
+                    </div>
+                   <div class="itens">
+                    <p>Complemento</p>
+                    <input class="com" type="text" placeholder="complemento">
+                   </div>
+                    <div class="itens">
+                        <p>Municipio</p>
+                        <input class="muni" type="text" placeholder="municipio">
+                    </div>
+                </div>
+               
+                <div class="botoes">
+                    <button onclick="cadastrar()">Cadastrar</button>
+                    <button onclick="abrirModal()">Voltar</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://kit.fontawesome.com/4c95932411.js" crossorigin="anonymous"></script>

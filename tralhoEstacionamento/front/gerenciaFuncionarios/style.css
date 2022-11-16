@@ -5,6 +5,9 @@ body{
     font-family: 'Poppins';
 }
 
+.logo{
+    font-weight: bold;
+}
 main{
     margin: 0 auto;
     width: 80%;
@@ -161,3 +164,80 @@ label{
     padding: 8px;
 }
 
+.modal{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    background-color: #c47dcf36;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    
+}
+.cadastro{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 40%;
+    width: 80%;
+}
+
+.itens > input, .itens > p{
+    width: 15vw;
+    padding: 5px 5px;
+    
+}
+
+.itens > input{
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    outline: none;
+}
+
+
+
+.itens{
+    /* CIMA /  DIREITA / EMBAIXO / ESQUERDA */
+    margin: 0px 0px 10px 0px;
+}
+
+.dados-pessoais, .dados-residenciais{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.tituloCad{
+    margin: 10px;
+    font-weight: 400;
+    background-color: #6C117B;
+    border-radius: 30px;
+    color: #fff;
+    padding: 4px 15px;
+    width: 20%;
+    font-size: 18px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.botoes > button{
+    background-color:rgb(128, 45, 141);
+    border: none;
+    color: #fff;
+    /* CIMA /  DIREITA / EMBAIXO / ESQUERDA */
+    margin: 0px 10px 0px 0px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.botoes > button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.39);
+    background-color:#b54ac5;
+}

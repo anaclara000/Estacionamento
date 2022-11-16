@@ -32,3 +32,40 @@ function abrirModal (){
       modal.classList.toggle("model");
 }
 
+function cadastrar(){
+    let nome = document.querySelector(".nome").value;
+    let email = document.querySelector(".email").value;
+    let data = document.querySelector(".data").value;
+    let cpf = document.querySelector(".CPF").value;
+    let bairro = document.querySelector(".bairro").value;
+    let rua = document.querySelector(".rua").value;
+    let cep = document.querySelector(".CEP").value;
+    let complemento = document.querySelector(".com").value;
+    let municipio = document.querySelector(".muni").value;
+
+    let options = JSON.stringify({
+        "nome_cli": nome,
+		"email": email,
+		"data_nasci": data,
+		"cpf": cpf,
+		"bairro": bairro,
+        "rua": rua,
+		"cep": cep,
+		"complemento": complemento,
+		"municipio": municipio
+    });
+
+    fetch("http://localhost:3000/clientes", {
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": options
+    })
+    .then(resp=> {return resp})
+    .then(resp => { 
+            alert("Cliente cadastrado com sucesso!");
+            window.location.reload();
+            abrirModal();
+    })
+}

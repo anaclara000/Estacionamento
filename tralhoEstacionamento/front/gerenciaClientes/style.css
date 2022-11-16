@@ -118,7 +118,7 @@ table {
 
 td{
     font-family:  'Poppins';
-    font-size: 14px;
+    font-size: 16px;
     border-bottom: 1px solid #CCCCCC;
     text-align: center;
     align-items: center;
@@ -136,6 +136,7 @@ th{
     font-size: 15px;
 
 }
+
 /* TOTAL CLIENTES */
 .total{
     background-color: white;
@@ -177,19 +178,27 @@ label{
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    height: 45%;
+    height: 40%;
     width: 80%;
-    border-radius: 30px;
 }
 
 .itens > input, .itens > p{
     width: 15vw;
     padding: 5px 5px;
+    
+}
+
+.itens > input{
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    outline: none;
 }
 
 .dados-pessoais > .itens > input{
     width: 18vw;
+    
 }
+
 .itens{
     /* CIMA /  DIREITA / EMBAIXO / ESQUERDA */
     margin: 0px 0px 10px 0px;
@@ -209,13 +218,13 @@ label{
     color: #fff;
     padding: 4px 15px;
     width: 20%;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .botoes {
     display: flex;
     justify-content: flex-end;
-
+    
 }
 
 .botoes > button{
@@ -226,4 +235,11 @@ label{
     margin: 0px 10px 0px 0px;
     border-radius: 5px;
     padding: 10px 15px;
+    cursor: pointer;
 }
+
+.botoes > button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.39);
+    background-color:#b54ac5;
+}
+
