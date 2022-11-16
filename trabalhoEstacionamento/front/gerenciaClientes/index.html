@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Gerenciamento de Clientes</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <aside>
+                <nav>
+                    <h1 class="logo">Penguion</h1>
+                    <ul>
+                        <!-- <li><a href="../"><i class="fa-solid fa-house"></i>Home</a></li> -->
+                        <li><a href="../gerenciaClientes/index.html"><i class="fa-solid fa-users"></i>Clientes</a></li>
+                        <!-- <li><a href="../"><i class="fa-solid fa-tags"></i>Tickets</a></li> -->
+                        <li><a href="../gerenciaPagamento/index.html"><i class="fa-solid fa-money-bill-1-wave"></i>Mensalidade</a></li>
+                        <!-- <li><a href="../"><i class="fa-solid fa-hand-holding-dollar"></i>Precificações</a></li> -->
+                        <li><a href="../gerenciaFuncionarios/index.html"><i class="fa-solid fa-user-gear"></i>Funcionários</a></li>
+                        <li><a href="../"><i class='bx bx-cog'></i>Configurações</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            
+        </header>
+
+        <main>
+            <h1 class="titulo">Lista de clientes cadastrados no sistema</h1>
+            <div class="cont-clientes">
+                <div class="itens-cont-clientes">
+                    <button onclick="abrirModal()" class="btnCli">Novo Cliente<i class="fa-solid fa-user-plus"></i></button>
+                    <div class="filtro-cont-clientes">
+                        <input type="text" placeholder="Pesquise pelo nome">
+                        <button class="btnPesquisar"><i class='bx bx-search-alt-2' ></i></button>
+                    </div>
+                    <div class="total">
+                        <p>Total de clientes:<b> 16</b> </p>
+                    </div>     
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr class="cont-title-table">
+                        <th>Id Cliente</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Data Nasci</th>
+                        <th>CPF</th>
+                        <th>Bairro</th>
+                        <th>Rua</th>
+                        <th>CEP</th>
+                        <th>Complemento</th>
+                        <th>Municipio</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="lista-clientes">
+                    <tr class="linhamodelo model">
+                        <td id="idCli"></td>
+                        <td id="nomeCli"></td>
+                        <td id="emailCli"></td>
+                        <td id="dataCli"></td>
+                        <td id="CPFCli"></td>
+                        <td id="bairroCli"></td>
+                        <td id="ruaCli"></td>
+                        <td id="cepCli"></td>
+                        <td id="compleCli"></td>
+                        <td id="muniCli"></td>
+                        <td id="acoes"><i onclick="deletarUser(this)"class='bx bx-trash'></i><i onclick="usual(this)" class='bx bxs-edit'></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <div class="modal model">
+            <div class="cadastro">
+                Preencher campos abaixo para efetuar o cadastro do cliente:
+                <h1 class="tituloCad">Dados Pessoais</h1>
+                <div class="dados-pessoais">
+                    <div class="itens">
+                        <p>Nome*</p>
+                        <input class="nome" type="text" placeholder="Joaquim Pereira">
+                    </div>
+                    <div class="itens">
+                        <p>Email*</p>
+                        <input class="email" type="text" placeholder="exemplo@exemplo.com">
+                    </div>
+                    <div class="itens">
+                        <p>Data de Nascimento*</p>
+                        <input class="data" type="text" placeholder="XX/XX/XXXX">
+                    </div>
+                    <div class="itens">
+                        <p>CPF*</p>
+                        <input class="CPF" type="text" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+                </div>
+                <h1 class="tituloCad">Dados Residenciais</h1>
+                <div class="dados-residenciais">
+                    <div class="itens">
+                        <p>Bairro</p>
+                        <input class="bairro" type="text" placeholder="bairro">
+                    </div>
+                    <div class="itens">
+                        <p>Rua</p>
+                        <input class="rua" type="text" placeholder="rua">
+                    </div>
+                    <div class="itens">
+                        <p>CEP*</p>
+                        <input class="CEP" type="text" placeholder="XXXXX-XX">
+                    </div>
+                   <div class="itens">
+                    <p>Complemento</p>
+                    <input class="com" type="text" placeholder="complemento">
+                   </div>
+                    <div class="itens">
+                        <p>Municipio</p>
+                        <input class="muni" type="text" placeholder="municipio">
+                    </div>
+                </div>
+               
+                <div class="botoes">
+                    <button onclick="cadastrar()">Cadastrar</button>
+                    <button onclick="abrirModal()">Voltar</button>
+                </div>
+            </div>
+        </div>
+        <div class="tela tela2">
+            <div class="atualizar">
+                Preencher campos abaixo para atualizar os dados:
+                <h1 class="tituloCad">Dados Pessoais</h1>
+                <div class="dados-pessoais">
+                    <div class="itens">
+                        <p>Nome*</p>
+                        <input id="nome" type="text" placeholder="Joaquim Pereira">
+                    </div>
+                    <div class="itens">
+                        <p>Email*</p>
+                        <input id="email" type="text" placeholder="exemplo@exemplo.com">
+                    </div>
+                    <div class="itens">
+                        <p>Data de Nascimento*</p>
+                        <input id="data" type="text" placeholder="XX/XX/XXXX">
+                    </div>
+                    <div class="itens">
+                        <p>CPF*</p>
+                        <input id="CPF" type="text" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+                </div>
+                <h1 class="tituloCad">Dados Residenciais</h1>
+                <div class="dados-residenciais">
+                    <div class="itens">
+                        <p>Bairro</p>
+                        <input id="bairro" type="text" placeholder="bairro">
+                    </div>
+                    <div class="itens">
+                        <p>Rua</p>
+                        <input id="rua" type="text" placeholder="rua">
+                    </div>
+                    <div class="itens">
+                        <p>CEP*</p>
+                        <input id="CEP" type="text" placeholder="XXXXX-XX">
+                    </div>
+                   <div class="itens">
+                    <p>Complemento</p>
+                    <input id="com" type="text" placeholder="complemento">
+                   </div>
+                    <div class="itens">
+                        <p>Municipio</p>
+                        <input id="muni" type="text" placeholder="municipio">
+                    </div>
+                </div>
+               
+                <div class="botoes">
+                    <button onclick="atualizar()">Salvar</button>
+                    <button onclick="fecharModal()">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/4c95932411.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="script.js"></script>
+</html>
